@@ -10,7 +10,7 @@ const DetailsContent = (props) => {
     const resp = await fetch("http://localhost:5555/movies");
     const data = await resp.json();
 
-    let pathArr = props.location.pathname.split("/");
+    let pathArr = props?.location?.pathname.split("/");
     let id = pathArr[pathArr.length - 1];
 
     const selectedMovie = data.filter((movie) => {
